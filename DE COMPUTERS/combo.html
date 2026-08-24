@@ -1,0 +1,1784 @@
+
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DE Computers | Nr. 1 for Second Hand</title>
+<a href="index.html">← Kthehu në Shop</a>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f3f5f7;
+    color:#111;
+}
+
+/* HEADER */
+
+header{
+    background:#080808;
+    color:white;
+    padding:18px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:900;
+}
+
+.logo span{
+    color:#00aaff;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#00aaff;
+}
+
+.cart-button{
+    background:#00aaff;
+    color:white;
+    border:0;
+    padding:11px 17px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    min-height:550px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:40px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #030303,
+            #073b52,
+            #030303
+        );
+}
+
+.hero small{
+    color:#00aaff;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-size:75px;
+    margin:15px 0;
+}
+
+.hero h1 span{
+    color:#00aaff;
+}
+
+.hero h2{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#ccc;
+    font-size:18px;
+}
+
+.button{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 25px;
+    background:#00aaff;
+    color:white;
+    text-decoration:none;
+    border:0;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.button:hover{
+    background:#008dcc;
+}
+
+/* SECTION */
+
+.section{
+    padding:70px 7%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.title p{
+    color:#00aaff;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.title h2{
+    font-size:40px;
+    margin-top:8px;
+}
+
+/* PRODUCTS */
+
+.shop-tools{
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.shop-tools input,
+.shop-tools select{
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    background:white;
+}
+
+.shop-tools input{
+    flex:1;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.product{
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 7px 22px rgba(0,0,0,.08);
+    transition:.2s;
+}
+
+.product:hover{
+    transform:translateY(-6px);
+}
+
+.product-picture{
+    height:190px;
+    background:#e9eef2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:80px;
+    overflow:hidden;
+}
+
+.product-picture img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-info p{
+    color:#666;
+    min-height:40px;
+}
+
+.price{
+    color:#00aaff;
+    font-size:23px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.add{
+    width:100%;
+}
+
+/* COMBOS */
+
+.combo-section{
+    background:#101010;
+    color:white;
+}
+
+.combo-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.combo-title p{
+    color:#00aaff;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.combo-title h2{
+    font-size:42px;
+    margin-top:10px;
+}
+
+.combos{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:30px;
+    width:100%;
+}
+
+.combo{
+    background:#181818;
+    border-radius:15px;
+    overflow:hidden;
+    border:1px solid #292929;
+    transition:.25s;
+}
+
+.combo:hover{
+    transform:translateY(-8px);
+    border-color:#00aaff;
+}
+
+.combo-image{
+    width:100%;
+    height:300px;
+    background:#181818;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.combo-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.combo-image img{
+    width:100%;
+    height:100%;
+    transition:.3s;
+}
+
+.combo:hover img{
+    transform:scale(1.06);
+}
+
+.combo-info{
+    padding:22px;
+}
+
+.combo-info h3{
+    font-size:22px;
+}
+
+.combo-info p{
+    color:#aaa;
+    margin:12px 0;
+    line-height:1.5;
+}
+
+.combo-price{
+    color:#00aaff;
+    font-size:27px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.combo-button{
+    width:100%;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:
+        repeat(3,1fr);
+    gap:25px;
+}
+
+.feature{
+    background:#181818;
+    padding:30px;
+    text-align:center;
+    border-radius:14px;
+}
+
+.feature-icon{
+    font-size:50px;
+}
+
+.feature h3{
+    margin:15px 0;
+}
+
+.feature p{
+    color:#aaa;
+}
+
+/* CONTACT */
+
+.contact-box{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+
+.contact-box p{
+    margin:15px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#050505;
+    color:#aaa;
+    text-align:center;
+    padding:30px;
+}
+
+footer strong{
+    color:#00aaff;
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    z-index:2000;
+    overflow:auto;
+    padding:30px 15px;
+}
+
+.modal.show{
+    display:block;
+}
+
+.modal-box{
+    max-width:700px;
+    background:white;
+    margin:auto;
+    border-radius:15px;
+    padding:30px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:18px;
+    top:10px;
+    border:0;
+    background:none;
+    font-size:32px;
+    cursor:pointer;
+}
+
+/* CART */
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #ddd;
+}
+
+.remove{
+    background:#ff4444;
+    color:white;
+    border:0;
+    padding:7px 10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.total{
+    text-align:right;
+    font-size:23px;
+    margin:25px 0;
+}
+
+/* CHECKOUT */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.checkout input,
+.checkout textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:7px;
+}
+
+.checkout textarea{
+    margin-top:12px;
+    min-height:90px;
+}
+
+.radio{
+    display:block;
+    background:#f2f2f2;
+    padding:12px;
+    margin:7px 0;
+    border-radius:7px;
+}
+
+.radio input{
+    width:auto;
+    margin-right:8px;
+}
+
+.summary{
+    background:#f2f5f7;
+    padding:20px;
+    margin-top:20px;
+    border-radius:10px;
+}
+
+.summary p{
+    margin:8px 0;
+}
+
+.order{
+    width:100%;
+}
+
+.success{
+    text-align:center;
+}
+
+.success-icon{
+    font-size:70px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .shop-tools{
+        flex-direction:column;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+.combo-image{
+    width:100%;
+    height:300px;
+    background:#181818;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.combo-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        DE <span>Computers</span>
+    </div>
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#shop">Shop</a>
+
+        <a href="#combos">Combos</a>
+
+        <a href="#second">Second Hand</a>
+
+        <a href="#services">Servis</a>
+
+        <a href="#contact">Kontakt</a>
+
+        <button
+            class="cart-button"
+            onclick="openCart()"
+        >
+            🛒 Shporta
+            (<span id="cartCount">0</span>)
+        </button>
+
+    </nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+    <div>
+
+        <small>
+            ♻️ SECOND HAND • TESTED • TRUSTED
+        </small>
+
+        <h1>
+            DE <span>Computers</span>
+        </h1>
+
+        <h2>
+            Nr. 1 for Second Hand
+        </h2>
+
+        <p>
+            PC • Maus • Tastiera • Monitor •
+            Ndëgjuese • Karrika
+        </p>
+
+        <a
+            href="#shop"
+            class="button"
+        >
+            🛍️ Shiko produktet
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- SHOP -->
+
+<section class="section" id="shop">
+
+    <div class="title">
+
+        <p>DE COMPUTERS</p>
+
+        <h2>
+            Produktet
+        </h2>
+
+    </div>
+
+
+    <div class="shop-tools">
+
+        <input
+            id="search"
+            placeholder="🔍 Kërko produkt..."
+        >
+
+        <select id="category">
+
+            <option value="all">
+                Të gjitha
+            </option>
+
+            <option value="pc">
+                🖥️ PC
+            </option>
+
+            <option value="mouse">
+                🖱️ Maus
+            </option>
+
+            <option value="keyboard">
+                ⌨️ Tastiera
+            </option>
+
+            <option value="monitor">
+                🖥️ Monitor
+            </option>
+
+            <option value="headset">
+                🎧 Ndëgjuese
+            </option>
+
+            <option value="chair">
+                🪑 Karrika
+            </option>
+
+        </select>
+
+        <select id="sort">
+
+            <option value="default">
+                Renditja
+            </option>
+
+            <option value="low">
+                Më i liri
+            </option>
+
+            <option value="high">
+                Më i shtrenjti
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div
+        class="products"
+        id="products"
+    ></div>
+
+</section>
+
+
+<!-- COMBOS -->
+
+<section
+    class="section combo-section"
+    id="combos"
+>
+
+    <div class="combo-title">
+
+        <p>🔥 SETUP COMBOS</p>
+
+        <h2>
+            Gaming Setup Combos
+        </h2>
+
+    </div>
+
+
+    <div class="combos">
+
+
+        <!-- COMBO 1 -->
+
+        <div class="combo">
+
+            <div class="combo-image">
+
+                <img
+                    src="images/combo1.jpg"
+                    alt="KB512 + Logitech Superlight X"
+                >
+
+            </div>
+
+            <div class="combo-info">
+
+                <h3>
+                    🔥 Starter Gaming Combo
+                </h3>
+
+                <p>
+                    Gaming Keyboard + Mouse +
+                   
+                </p>
+
+                <div class="combo-price">
+                    €75
+                </div>
+
+                <button
+                    class="button combo-button"
+                    onclick="addCombo('Starter Gaming Combo',199)"
+                >
+                    🛒 Shto në shportë
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- COMBO 2 -->
+
+        <div class="combo">
+
+            <div class="combo-image">
+
+                <img
+                    src="images/combo2.jpg"
+                    alt="Gaming Desk Setup"
+                >
+
+            </div>
+
+            <div class="combo-info">
+
+                <h3>
+                    ⚡ Pro Gaming Combo
+                </h3>
+
+                <p>
+                   Gaming headset + Tastiere Gaming + Mouse Gaming
+                </p>
+
+                <div class="combo-price">
+                    €90
+                </div>
+
+                <button
+                    class="button combo-button"
+                    onclick="addCombo('Pro Gaming Combo',299)"
+                >
+                    🛒 Shto në shportë
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <
+</section>
+
+
+<!-- SECOND HAND -->
+
+<section
+    class="section dark"
+    id="second"
+>
+
+    <div class="title">
+
+        <p>♻️ SECOND HAND</p>
+
+        <h2>
+            Pse DE Computers?
+        </h2>
+
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔍
+            </div>
+
+            <h3>
+                Të kontrolluara
+            </h3>
+
+            <p>
+                Produktet kontrollohen para shitjes.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                💰
+            </div>
+
+            <h3>
+                Çmime të mira
+            </h3>
+
+            <p>
+                Pajisje të mira me çmime të ulëta.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🤝
+            </div>
+
+            <h3>
+                Të besueshme
+            </h3>
+
+            <p>
+                Kujdesemi për çdo klient.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section
+    class="section dark"
+    id="services"
+>
+
+    <div class="title">
+
+        <p>🔧 SERVICE</p>
+
+        <h2>
+            Shërbimet
+        </h2>
+
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🖥️
+            </div>
+
+            <h3>
+                PC Repair
+            </h3>
+
+            <p>
+                Diagnostikim dhe riparim.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>
+                PC Upgrade
+            </h3>
+
+            <p>
+                RAM, SSD, GPU dhe CPU.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🧹
+            </div>
+
+            <h3>
+                PC Cleaning
+            </h3>
+
+            <p>
+                Pastrim dhe mirëmbajtje.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section
+    class="section"
+    id="contact"
+>
+
+    <div class="title">
+
+        <p>📞 CONTACT</p>
+
+        <h2>
+            Na kontakto
+        </h2>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <p>
+            📱 Telefon:
+            <strong>
+                044-365-963📞
+            </strong>
+        </p>
+
+        <p>
+            📧 Email:
+            <strong>
+                decomputers@email.com
+            </strong>
+        </p>
+
+        <p>
+            📍 Mitrovice, Kosovë
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <h2>
+        DE <strong>Computers</strong>
+    </h2>
+
+    <p>
+        Nr. 1 for Second Hand
+    </p>
+
+    <p>
+        © 2026 DE Computers
+    </p>
+
+</footer>
+
+
+<!-- CART -->
+
+<div
+    class="modal"
+    id="cartModal"
+>
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeCart()"
+        >
+            ×
+        </button>
+
+        <h2>
+            🛒 Shporta
+        </h2>
+
+        <br>
+
+        <div id="cartItems"></div>
+
+        <div class="total">
+
+            Total:
+            €<strong id="cartTotal">
+                0
+            </strong>
+
+        </div>
+
+        <button
+            class="button"
+            style="width:100%"
+            onclick="openCheckout()"
+        >
+            Vazhdo te Checkout
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- CHECKOUT -->
+
+<div
+    class="modal"
+    id="checkoutModal"
+>
+
+    <div class="modal-box checkout">
+
+        <button
+            class="close"
+            onclick="closeCheckout()"
+        >
+            ×
+        </button>
+
+        <h2>
+            📦 Checkout
+        </h2>
+
+        <br>
+
+
+        <form id="checkoutForm">
+
+
+            <div class="form-grid">
+
+                <input
+                    placeholder="Emri *"
+                    required
+                >
+
+                <input
+                    placeholder="Mbiemri *"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    placeholder="Numri i telefonit *"
+                    required
+                >
+
+                <input
+                    type="email"
+                    placeholder="Email *"
+                    required
+                >
+
+                <input
+                    value="Kosovë"
+                    placeholder="Shteti *"
+                    required
+                >
+
+                <input
+                    placeholder="Qyteti *"
+                    required
+                >
+
+                <input
+                    placeholder="Adresa *"
+                    required
+                >
+
+                <input
+                    placeholder="Numri i shtëpisë"
+                >
+
+                <input
+                    placeholder="Kodi postar"
+                >
+
+            </div>
+
+
+            <textarea
+                placeholder="Shënim për porosinë..."
+            ></textarea>
+
+
+            <h3>
+                🚚 Dërgesa
+            </h3>
+
+
+            <label class="radio">
+
+                <input
+                    type="radio"
+                    name="delivery"
+                    checked
+                >
+
+                Dërgesë në adresë
+
+            </label>
+
+
+            <label class="radio">
+
+                <input
+                    type="radio"
+                    name="delivery"
+                >
+
+                Merr në dyqan
+
+            </label>
+
+
+            <h3>
+                💳 Pagesa
+            </h3>
+
+
+            <label class="radio">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    checked
+                >
+
+                💵 Cash on Delivery
+
+            </label>
+
+
+            <label class="radio">
+
+                <input
+                    type="radio"
+                    name="payment"
+                >
+
+                💳 Pagesë me kartelë
+
+            </label>
+
+
+            <div class="summary">
+
+                <p>
+                    Produktet:
+                    €<span id="checkoutProducts">
+                        0
+                    </span>
+                </p>
+
+                <p>
+                    Dërgesa:
+                    €<span id="deliveryPrice">
+                        3
+                    </span>
+                </p>
+
+                <h2>
+                    Total:
+                    €<span id="checkoutTotal">
+                        0
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="button order"
+            >
+                ✅ Konfirmo porosinë
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- SUCCESS -->
+
+<div
+    class="modal"
+    id="successModal"
+>
+
+    <div class="modal-box success">
+
+        <div class="success-icon">
+            ✅
+        </div>
+
+        <h2>
+            Porosia u pranua!
+        </h2>
+
+        <p>
+            Faleminderit për blerjen.
+        </p>
+
+        <p>
+            Numri i porosisë:
+            <strong id="orderNumber"></strong>
+        </p>
+
+        <button
+            class="button"
+            onclick="closeSuccess()"
+        >
+            Në rregull
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+const products = [
+
+    {
+        id: 1,
+        name: "Gaming PC",
+        category: "pc",
+        price: 500,
+        stock: 19,
+        image: "images/gamingpc500.jpg",
+        description: "Gaming PC second hand, i testuar dhe gati për përdorim."
+    },
+
+    {
+        id: 2,
+        name: "Gaming PC",
+        category: "pc",
+        price: 620,
+        stock: 8,
+        image: "images/gamingpc620.jpg",
+        description: "Gaming PC i përdorur në gjendje shumë të mirë."
+    },
+
+    {
+        id: 3,
+        name: "Gaming PC - Zbritje",
+        category: "pc",
+        price: 700,
+        stock: 4,
+        image: "images/gamingpc700.jpg",
+        description: "Gaming PC me zbritje speciale."
+    },
+
+    {
+        id: 4,
+        name: "Alienware 240Hz",
+        category: "monitor",
+        price: 135,
+        stock: 92,
+        image: "images/alienware240.jpg",
+        description: "Alienware Gaming Monitor 240Hz."
+    },
+
+    {
+        id: 5,
+        name: "AOC 240Hz",
+        category: "monitor",
+        price: 105,
+        stock: 23,
+        image: "images/aoc240.jpg",
+        description: "AOC Gaming Monitor 240Hz."
+    },
+
+    {
+        id: 6,
+        name: "TUF Gaming",
+        category: "monitor",
+        price: 150,
+        stock: 3,
+        image: "images/tuf280.jpg",
+        description: "ASUS TUF Gaming Monitor."
+    },
+
+    {
+        id: 7,
+        name: "Benq Monitor",
+        category: "monitor",
+        price: 150,
+        stock: 10,
+        image: "images/bench240.jpg",
+        description: "Monitor Benq 240hz"
+    },
+
+    {
+        id: 8,
+        name: "Gaming PC 1300€",
+        category: "pc",
+        price: 1300,
+        stock: 2,
+        image: "images/gamingpc1300.jpg",
+        description: "High-end Gaming PC."
+    },
+
+    {
+
+    id: 9,
+    name: "Gaming PC",
+    category: "pc",
+    price: 820,
+    stock: 5,
+    image: "images/gamingpc800.jpg"
+    },
+];
+ 
+
+/* ADD PRODUCT */
+let cart = [];
+function addToCart(id){
+
+    const product =
+        products.find(
+            p => p.id === id
+        );
+
+
+    const existing =
+        cart.find(
+            p => p.id === id
+        );
+
+
+    if(existing){
+
+        existing.quantity++;
+
+    }else{
+
+        cart.push({
+
+            ...product,
+
+            quantity:1
+
+        });
+
+    }
+
+
+    updateCart();
+
+    alert(
+        product.name +
+        " u shtua në shportë!"
+    );
+
+}
+
+
+/* ADD COMBO */
+
+function addCombo(name,price){
+
+    cart.push({
+
+        id:Date.now(),
+
+        name:name,
+
+        price:price,
+
+        quantity:1
+
+    });
+
+
+    updateCart();
+
+    alert(
+        name +
+        " u shtua në shportë!"
+    );
+
+}
+
+
+/* CART */
+
+function updateCart(){
+
+    const items =
+        document.getElementById(
+            "cartItems"
+        );
+
+    let total=0;
+
+    let count=0;
+
+
+    items.innerHTML="";
+
+
+    cart.forEach(item => {
+
+        total +=
+            item.price *
+            item.quantity;
+
+        count +=
+            item.quantity;
+
+
+        items.innerHTML += `
+
+            <div class="cart-item">
+
+                <div>
+
+                    <strong>
+                        ${item.name}
+                    </strong>
+
+                    <br>
+
+                    €${item.price}
+                    ×
+                    ${item.quantity}
+
+                </div>
+
+                <button
+                    class="remove"
+                    onclick="removeItem(${item.id})"
+                >
+                    ❌
+                </button>
+
+            </div>
+
+        `;
+
+    });
+
+
+    if(cart.length===0){
+
+        items.innerHTML =
+            "<p>Shporta është bosh.</p>";
+
+    }
+
+
+    document
+    .getElementById("cartCount")
+    .innerText=count;
+
+
+    document
+    .getElementById("cartTotal")
+    .innerText=
+        total.toFixed(2);
+
+
+    updateCheckout();
+
+}
+
+
+/* REMOVE */
+
+function removeItem(id){
+
+    cart =
+        cart.filter(
+            item =>
+            item.id !== id
+        );
+
+    updateCart();
+
+}
+
+
+/* OPEN CART */
+
+function openCart(){
+
+    updateCart();
+
+    document
+    .getElementById("cartModal")
+    .classList.add("show");
+
+}
+
+
+/* CLOSE CART */
+
+function closeCart(){
+
+    document
+    .getElementById("cartModal")
+    .classList.remove("show");
+
+}
+
+
+/* CHECKOUT */
+
+function openCheckout(){
+
+    if(cart.length===0){
+
+        alert(
+            "Shporta është bosh!"
+        );
+
+        return;
+
+    }
+
+
+    closeCart();
+
+    updateCheckout();
+
+
+    document
+    .getElementById("checkoutModal")
+    .classList.add("show");
+
+}
+
+
+function closeCheckout(){
+
+    document
+    .getElementById("checkoutModal")
+    .classList.remove("show");
+
+}
+
+
+/* TOTAL */
+
+function updateCheckout(){
+
+    let total=0;
+
+
+    cart.forEach(item => {
+
+        total +=
+            item.price *
+            item.quantity;
+
+    });
+
+
+    const delivery =
+        cart.length > 0
+        ? 3
+        : 0;
+
+
+    document
+    .getElementById("checkoutProducts")
+    .innerText=
+        total.toFixed(2);
+
+
+    document
+    .getElementById("deliveryPrice")
+    .innerText=
+        delivery.toFixed(2);
+
+
+    document
+    .getElementById("checkoutTotal")
+    .innerText=
+        (total+delivery)
+        .toFixed(2);
+
+}
+
+
+/* ORDER */
+
+document
+.getElementById("checkoutForm")
+.addEventListener(
+    "submit",
+    function(e){
+
+        e.preventDefault();
+
+
+        const number =
+            "DE" +
+            Math.floor(
+                10000 +
+                Math.random()*90000
+            );
+
+
+        document
+        .getElementById("orderNumber")
+        .innerText=
+            "#" + number;
+
+
+        closeCheckout();
+
+
+        document
+        .getElementById("successModal")
+        .classList.add("show");
+
+
+        cart=[];
+
+        updateCart();
+
+    }
+);
+
+
+/* CLOSE SUCCESS */
+
+function closeSuccess(){
+
+    document
+    .getElementById("successModal")
+    .classList.remove("show");
+
+}
+
+
+/* SEARCH */
+
+document
+.getElementById("search")
+.addEventListener(
+    "input",
+    showProducts
+);
+
+
+/* CATEGORY */
+
+document
+.getElementById("category")
+.addEventListener(
+    "change",
+    showProducts
+);
+
+
+/* SORT */
+
+document
+.getElementById("sort")
+.addEventListener(
+    "change",
+    showProducts
+);
+
+function showProducts() {
+
+    const container = document.getElementById("products");
+
+    container.innerHTML = "";
+
+    products.forEach(product => {
+
+        container.innerHTML += `
+        
+        <div class="product">
+
+            <div class="product-picture">
+                <img
+    src="${product.image}"
+    alt="${product.name}"
+    onclick="openImage('${product.image}')"
+    style="cursor:pointer;"
+>
+            </div>
+
+            <div class="product-info">
+
+                <h3>${product.name}</h3>
+
+                <p>${product.description}</p>
+
+                <div class="price">
+                    €${product.price}
+                </div>
+
+                <button 
+                    class="button add"
+                    onclick="addToCart(${product.id})">
+                    🛒 Shto në shportë
+                </button>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+showProducts();
+function openImage(image) {
+    window.open(image, "_blank");
+}
+</script>
+
+</body>
+</html>
+
